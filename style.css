@@ -87,8 +87,7 @@ body{
 }
 
 /* responsive design */
-
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .container{
         width: 360px;
         flex-direction: column;
