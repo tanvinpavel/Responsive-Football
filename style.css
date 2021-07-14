@@ -1,0 +1,129 @@
+body{
+    font-family: poppins;
+    margin: 0;
+}
+
+.container{
+    width: 1160px;
+    display: flex;
+    justify-content: space-between;
+}
+/* header area style */
+.header-area{
+    height: 677px;
+    background-color: #2d25a0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-text .banner-title{
+    font-size: 64px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 80px;
+}
+.banner-img img{
+    width: 556px;
+}
+.link-btn{
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+}
+.arrow{
+    margin-left: 14px;
+}
+
+/* players section style */
+.players-area{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    grid-gap: 30px;
+}
+.player{
+    padding: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player img{
+    width: 300px;
+}
+.player-name{
+    font-size: 28px;
+    font-weight: 700;
+    margin: 16px 0;
+}
+.player-info{
+    font-size: 16px;
+    color: #6C6C6C;
+    line-height: 26px;
+}
+
+/* footer section style */
+.page-info{
+    text-align: center;
+    padding: 63px 0;
+}
+.page-info img{
+    width: 483px;
+}
+
+.social i{
+    padding: 10px;
+    color: #969BAB;
+    background-color: #e7e7e8;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.copy-right-text{
+    font-size: 18px;
+}
+
+/* responsive design */
+
+@media (max-width: 360px) {
+    .container{
+        width: 360px;
+        flex-direction: column;
+    }
+
+    /* header area responsive */
+    .header-area{
+        height: 695px;
+    }
+    .banner-text{
+        padding-left: 16px;
+    }
+    .banner-text .banner-title{
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .banner-img{
+        margin-top: 50px;
+        padding-left: 16px;
+    }
+    .banner-img img{
+        width: 329px;
+    }
+
+    /* player section responsive */
+
+    .players{
+        display: grid;
+        grid-template-columns: 330px;
+        grid-gap: 30px;
+        justify-content: center;
+    }
+
+    /* footer section responsive */
+    .page-info img{
+        width: 271px;
+    }
+}
