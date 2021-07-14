@@ -8,7 +8,11 @@ body{
     display: flex;
     justify-content: space-between;
 }
-/* header area style */
+
+/* ------------------
+    header area style
+   ------------------- */
+
 .header-area{
     height: 677px;
     background-color: #2d25a0;
@@ -22,6 +26,9 @@ body{
     font-weight: 700;
     line-height: 80px;
 }
+.banner-img{
+    position: relative;
+}
 .banner-img img{
     width: 556px;
 }
@@ -34,10 +41,29 @@ body{
     display: inline-block;
 }
 .arrow{
-    margin-left: 14px;
+    width: 20px;
 }
 
-/* players section style */
+.header-area:hover .banner-img img{
+    transition: transform 350ms;
+    transform: rotatey(360deg);
+}
+
+.arrow{
+    animation: run 300ms ease-in-out infinite alternate;
+}
+@keyframes run {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+
+/* ----------------------
+    players section style
+   ----------------------- */
 .players-area{
     padding: 50px 0;
     display: flex;
@@ -47,6 +73,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 330px);
     grid-gap: 30px;
+    justify-content: center;
 }
 .player{
     padding: 15px;
@@ -66,7 +93,91 @@ body{
     line-height: 26px;
 }
 
-/* footer section style */
+/* -------------
+    score board
+    ------------ */
+.score-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 50px 0;
+}
+.section-title{
+    font-size: 45px;
+    margin-top: 0;
+}
+.score-board{
+    width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.score-board img{
+    width: 100px;
+}
+.score{
+    height: 180px;
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 20px;
+}
+.club{
+    text-align: center;
+}
+
+/*  ----------------
+    news area design
+    ----------------  */
+.news-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newses{
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+}
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left{
+    background: url(images/icons/match.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.right{
+    background: url(images/icons/match2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.news span{
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: black;
+    color: white;
+}
+.news-headline{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    font-weight: 700;
+    color: white;
+}
+.news-title{
+    margin: 0;
+    line-height: 24px;
+}
+
+
+/* ----------------------
+    footer section style
+    --------------------- */
 .page-info{
     text-align: center;
     padding: 63px 0;
@@ -86,14 +197,18 @@ body{
     font-size: 18px;
 }
 
-/* responsive design */
-@media (max-width: 480px) {
+/*  -----------------------------------
+    responsive design for mobile device
+    ----------------------------------- */
+@media (max-width: 688px) {
     .container{
         width: 360px;
         flex-direction: column;
     }
 
-    /* header area responsive */
+    /* --------------------
+    header area responsive
+    ----------------------- */
     .header-area{
         height: 695px;
     }
@@ -112,7 +227,9 @@ body{
         width: 329px;
     }
 
-    /* player section responsive */
+    /* --------------------------
+        player section responsive
+       -------------------------- */
 
     .players{
         display: grid;
@@ -120,8 +237,33 @@ body{
         grid-gap: 30px;
         justify-content: center;
     }
+    /*  -----------------------
+        score board responsive
+        ----------------------- */
+    .score-board img{
+        width: 90px;
+    }
+    .club h2{
+        font-size: 13px;
+    }
+    .score{
+        height: 100px;
+        font-size: 35px;
+    }
+    .score-board{
+        width: 360px;
+    }
 
-    /* footer section responsive */
+    /* -----------------------
+        news area responsive
+       ----------------------- */
+    .newses{
+        grid-template-columns: 380px;
+    }
+
+    /* --------------------------
+        footer section responsive
+       -------------------------- */
     .page-info img{
         width: 271px;
     }
